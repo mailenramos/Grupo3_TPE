@@ -100,6 +100,8 @@ public class Servicios {
        En cada paso elegimos un paquete y recorremos los camiones; el primero que tenga espacio 
        libre suficiente y cumpla con la heladera (si el paquete lleva comida) se lo queda.
        Es una decisión rápida e irrevocable: paquete que se sube a un camión, no se baja más.
+
+       COSTO COMPUTACIONAL: O(P log P + P * C)
     */
     public Solucion greedy() {
         Solucion S = new Solucion();
@@ -196,6 +198,8 @@ public class Servicios {
        2. Poda con Greedy: Como corremos Greedy primero, ya sabemos cuál es el "récord" a batir. 
        Si en medio de una combinación el peso que venimos dejando afuera ya empata o supera 
        a ese récord, dejamos de buscar, no va a ser la solución óptima.
+
+       COSTO COMPUTACIONAL: O((C +1)^P)
     */
 
     public Solucion backtracking() {
